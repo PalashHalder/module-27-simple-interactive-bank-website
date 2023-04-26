@@ -4,5 +4,10 @@ document.getElementById('btn-deposit').addEventListener('click', function() {
     // for input field use .value to get the value inside the input field
     const depositField = document.getElementById('deposit-field');
     const depositAmount = depositField.value;
-    console.log(depositAmount);
+    //console.log(depositAmount);
+    // step-3: get the current deposit total
+    // for not-input(element other than input, textarea) use innerText to get the text
+    const depositTotalAmount = document.getElementById('deposit-total');
+    const depositTotal = depositTotalAmount.innerText;
+    depositTotalAmount.innerText = depositAmount;
 })
